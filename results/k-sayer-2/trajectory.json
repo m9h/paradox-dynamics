@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "software": {
+    "package": "paradox-dynamics",
+    "version": "0.1.0",
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "source_sha256": {
+      "__init__.py": "095e0652848559dfb2437a0fe579c658e2e6bbcbd96cad917dc4eaf38379f34a",
+      "cli.py": "4b6a50f59b0f64d4a17d3574dd64c6108138c7fbc2703e01159d3014b27119e2",
+      "engine.py": "a14b2c068055c6d952e7bcfe94fcebfd91d42c3c8ca9e125d6f8518bd2ac80f4",
+      "interactive.py": "f9a1ba3c5a1cf1490bd137d195024f4a5c877444ee7e706fcd11f6bae822523b",
+      "models.py": "787b646e1939735bf99c90bb20919b9fd5db42acce9d7f530ad55a882e23d6ad",
+      "plotting.py": "cd8f3d0f409b6cd404e9424060715f3f31ddcf462326959e763eb63e08ca65c1"
+    }
+  },
+  "model": "k-sayer",
+  "title": "k-Sayer",
+  "equation": "x' = 1 - (1-k)*x",
+  "source": {
+    "url": "https://pgrim.org/articles/patternandchaos.pdf",
+    "journal_pages": "668\u2013669"
+  },
+  "precision": "rational",
+  "update_schedule": "simultaneous",
+  "schedule_definition": "All components use the previous state",
+  "steps": 22,
+  "requested_initial": [
+    "20003/30000"
+  ],
+  "requested_parameters": {
+    "k": "0.5"
+  },
+  "represented_initial": [
+    "20003/30000"
+  ],
+  "represented_parameters": {
+    "k": "1/2"
+  },
+  "float_initial_hex": null,
+  "float_parameters_hex": null,
+  "state_encoding": "rational p/q strings",
+  "states": [
+    [
+      "20003/30000"
+    ],
+    [
+      "39997/60000"
+    ],
+    [
+      "80003/120000"
+    ],
+    [
+      "159997/240000"
+    ],
+    [
+      "320003/480000"
+    ],
+    [
+      "639997/960000"
+    ],
+    [
+      "1280003/1920000"
+    ],
+    [
+      "2559997/3840000"
+    ],
+    [
+      "5120003/7680000"
+    ],
+    [
+      "10239997/15360000"
+    ],
+    [
+      "20480003/30720000"
+    ],
+    [
+      "40959997/61440000"
+    ],
+    [
+      "81920003/122880000"
+    ],
+    [
+      "163839997/245760000"
+    ],
+    [
+      "327680003/491520000"
+    ],
+    [
+      "655359997/983040000"
+    ],
+    [
+      "1310720003/1966080000"
+    ],
+    [
+      "2621439997/3932160000"
+    ],
+    [
+      "5242880003/7864320000"
+    ],
+    [
+      "10485759997/15728640000"
+    ],
+    [
+      "20971520003/31457280000"
+    ],
+    [
+      "41943039997/62914560000"
+    ],
+    [
+      "83886080003/125829120000"
+    ]
+  ],
+  "diagnostics": {
+    "recurrence": null,
+    "recurrence_meaning": "Exact recurrence for this rational initial state",
+    "tangent_log_gain": {
+      "value": -0.6931471805599453,
+      "status": "finite",
+      "samples": 22,
+      "units": "natural-log units per iteration",
+      "interpretation": "Finite-time derivative growth of the real equation; not a test for chaos or a derivative of rounded arithmetic"
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "software": {
+    "package": "paradox-dynamics",
+    "version": "0.1.0",
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "source_sha256": {
+      "__init__.py": "095e0652848559dfb2437a0fe579c658e2e6bbcbd96cad917dc4eaf38379f34a",
+      "cli.py": "4b6a50f59b0f64d4a17d3574dd64c6108138c7fbc2703e01159d3014b27119e2",
+      "engine.py": "a14b2c068055c6d952e7bcfe94fcebfd91d42c3c8ca9e125d6f8518bd2ac80f4",
+      "interactive.py": "f9a1ba3c5a1cf1490bd137d195024f4a5c877444ee7e706fcd11f6bae822523b",
+      "models.py": "787b646e1939735bf99c90bb20919b9fd5db42acce9d7f530ad55a882e23d6ad",
+      "plotting.py": "cd8f3d0f409b6cd404e9424060715f3f31ddcf462326959e763eb63e08ca65c1"
+    }
+  },
+  "model": "minimalist",
+  "title": "Minimalist",
+  "equation": "x' = 1 - abs(min(x,1-x)-x)",
+  "source": {
+    "url": "https://pgrim.org/articles/patternandchaos.pdf",
+    "journal_pages": "665\u2013666"
+  },
+  "precision": "rational",
+  "update_schedule": "simultaneous",
+  "schedule_definition": "All components use the previous state",
+  "steps": 22,
+  "requested_initial": [
+    "2/3"
+  ],
+  "requested_parameters": {},
+  "represented_initial": [
+    "2/3"
+  ],
+  "represented_parameters": {},
+  "float_initial_hex": null,
+  "float_parameters_hex": null,
+  "state_encoding": "rational p/q strings",
+  "states": [
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ],
+    [
+      "2/3"
+    ]
+  ],
+  "diagnostics": {
+    "recurrence": {
+      "start": 0,
+      "period": 1,
+      "first_repeat": 1
+    },
+    "recurrence_meaning": "Exact recurrence for this rational initial state",
+    "tangent_log_gain": {
+      "value": 0.6931471805599453,
+      "status": "finite",
+      "samples": 22,
+      "units": "natural-log units per iteration",
+      "interpretation": "Finite-time derivative growth of the real equation; not a test for chaos or a derivative of rounded arithmetic"
+    }
+  }
+}

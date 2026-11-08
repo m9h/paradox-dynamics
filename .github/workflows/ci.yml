@@ -1,0 +1,31 @@
+name: Validate equations and examples
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --python python --locked --extra test --extra notebook
+      - run: uv run --locked --extra test --extra notebook ruff check .
+      - run: uv run --locked --extra test --extra notebook pytest -q
+      - run: uv run --locked --extra test --extra notebook python examples/reproduce.py --out scratch/reproduced
+      - run: uv run --locked --extra test --extra notebook python examples/execute_notebook.py --output scratch/paradox_lab.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: examples-python-${{ matrix.python-version }}
+          path: scratch/

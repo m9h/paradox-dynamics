@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "software": {
+    "package": "paradox-dynamics",
+    "version": "0.1.0",
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "source_sha256": {
+      "__init__.py": "095e0652848559dfb2437a0fe579c658e2e6bbcbd96cad917dc4eaf38379f34a",
+      "cli.py": "4b6a50f59b0f64d4a17d3574dd64c6108138c7fbc2703e01159d3014b27119e2",
+      "engine.py": "a14b2c068055c6d952e7bcfe94fcebfd91d42c3c8ca9e125d6f8518bd2ac80f4",
+      "interactive.py": "f9a1ba3c5a1cf1490bd137d195024f4a5c877444ee7e706fcd11f6bae822523b",
+      "models.py": "787b646e1939735bf99c90bb20919b9fd5db42acce9d7f530ad55a882e23d6ad",
+      "plotting.py": "cd8f3d0f409b6cd404e9424060715f3f31ddcf462326959e763eb63e08ca65c1"
+    }
+  },
+  "model": "chaotic-liar",
+  "title": "Chaotic Liar",
+  "equation": "x' = 1 - abs(1-2*x)",
+  "source": {
+    "url": "https://pgrim.org/articles/patternandchaos.pdf",
+    "journal_pages": "670\u2013672"
+  },
+  "precision": "rational",
+  "update_schedule": "simultaneous",
+  "schedule_definition": "All components use the previous state",
+  "steps": 20,
+  "requested_initial": [
+    "0.3141"
+  ],
+  "requested_parameters": {},
+  "represented_initial": [
+    "3141/10000"
+  ],
+  "represented_parameters": {},
+  "float_initial_hex": null,
+  "float_parameters_hex": null,
+  "state_encoding": "rational p/q strings",
+  "states": [
+    [
+      "3141/10000"
+    ],
+    [
+      "3141/5000"
+    ],
+    [
+      "1859/2500"
+    ],
+    [
+      "641/1250"
+    ],
+    [
+      "609/625"
+    ],
+    [
+      "32/625"
+    ],
+    [
+      "64/625"
+    ],
+    [
+      "128/625"
+    ],
+    [
+      "256/625"
+    ],
+    [
+      "512/625"
+    ],
+    [
+      "226/625"
+    ],
+    [
+      "452/625"
+    ],
+    [
+      "346/625"
+    ],
+    [
+      "558/625"
+    ],
+    [
+      "134/625"
+    ],
+    [
+      "268/625"
+    ],
+    [
+      "536/625"
+    ],
+    [
+      "178/625"
+    ],
+    [
+      "356/625"
+    ],
+    [
+      "538/625"
+    ],
+    [
+      "174/625"
+    ]
+  ],
+  "diagnostics": {
+    "recurrence": null,
+    "recurrence_meaning": "Exact recurrence for this rational initial state",
+    "tangent_log_gain": {
+      "value": 0.6931471805599453,
+      "status": "finite",
+      "samples": 20,
+      "units": "natural-log units per iteration",
+      "interpretation": "Finite-time derivative growth of the real equation; not a test for chaos or a derivative of rounded arithmetic"
+    }
+  }
+}
